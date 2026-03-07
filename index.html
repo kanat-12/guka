@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Гулкайыр</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div id="intro-screen">
+  <div class="intro-content">
+    <div class="intro-small">Специально для</div>
+    <div class="intro-title">Гулкайыр 💖</div>
+    <div class="intro-subtitle">Маленький сайт с теплом и любовью</div>
+  </div>
+</div>
+  <div id="loader">
+  <div class="loader-text">Загрузка...</div>
+</div>
+  <div class="sun-glow"></div>
+  <div class="overlay-hearts" id="hearts"></div>
+
+  <main class="wrap">
+    <section class="card">
+      <h1 class="title">Гулкайыр</h1>
+      <button id="themeToggle" class="theme-btn">🌙 Ночь</button>
+      <p class="subtitle">
+        Для тебя здесь спрятана особенная поздравительная записка 💌<br>
+        Но сначала нужно угадать секретное слово или дораму.
+      </p>
+
+      <!-- Блок загадки -->
+      <section class="quiz-box">
+        <h2 class="quiz-title">Секретное задание ✨</h2>
+        <p class="quiz-text">
+          У тебя есть 3 попытки. Если не получится, появится подсказка.
+        </p>
+
+        <input
+          type="text"
+          id="answerInput"
+          class="input"
+          placeholder="Напиши слово или название дорамы"
+        />
+
+        <div class="btn-row">
+          <button class="btn" id="checkBtn">Проверить</button>
+        </div>
+
+        <div class="attempts" id="attemptsText">Осталось попыток: 3</div>
+        <div class="status" id="statusText"></div>
+
+        <div class="hint" id="hintBox">
+          Подсказка: это очень романтичная дорама с солнцем, военными и большой любовью ☀️❤️
+        </div>
+      </section>
+
+      <!-- Мини-игра врача -->
+      <section class="game-box" id="gameBox">
+        <h2 class="game-title">🚑 Мини-игра: Спаси пациента</h2>
+
+        <p class="game-status" id="patientStatus">
+          Пациент поступил в тяжёлом состоянии. Помоги его спасти.
+        </p>
+
+        <div class="game-bar">
+          <div class="game-bar-fill" id="healthBar"></div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn" id="pulseBtn">🩺 Проверить пульс</button>
+          <button class="btn" id="medicineBtn">💊 Дать лекарство</button>
+          <button class="btn" id="stabilizeBtn">❤️ Стабилизировать</button>
+        </div>
+      </section>
+
+      <!-- Скрытая записка -->
+      <section class="envelope-section" id="envelopeSection">
+  <div class="envelope" id="envelope">
+    <div class="envelope-top"></div>
+    <div class="envelope-body"></div>
+    <div class="envelope-text">💌 Открыть письмо</div>
+  </div>
+</section>
+
+<section class="secret-note" id="secretNote">
+  <h2 class="note-title">Гулкайыр 💖</h2>
+  <p class="note-text" id="typingText"> Поздравляю тебя с прекрасным праздником — 8 Марта!
+Желаю тебе счастья, крепкого здоровья, любви и исполнения самых заветных желаний.
+Пусть каждый день приносит радость, улыбки и хорошее настроение.
+Пусть в твоей жизни всегда будет много тепла, заботы и красивых моментов.
+
+Оставайся такой же прекрасной, доброй и особенной.
+Пусть рядом всегда будут люди, которые ценят, берегут и искренне любят тебя.</p>
+</section>
+      <!-- Музыка -->
+      <section class="music-panel">
+        <h2 class="music-title">Музыка 🎵</h2>
+
+        <div class="btn-row">
+          <button class="btn" id="musicToggleBtn">▶ Включить музыку</button>
+        </div>
+
+        <audio id="bgMusic" loop>
+          <source src="бос.mp4" type="audio/mpeg" />
+        </audio>
+      </section>
+
+      <!-- Фото / видео / аудио -->
+      <section class="gallery">
+        <div class="media-box photo-box">
+          <img src="гука.jpeg" alt="Фото Гулкайыр" />
+        </div>
+        <section class="slider-section">
+  <h2 class="music-title">Любимые моменты из дорамы 🎬</h2>
+
+  <div class="slider" id="slider">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <img src="1.jpg" alt="Фото 1">
+      </div>
+      <div class="slide">
+        <img src="2.jpg" alt="Фото 2">
+      </div>
+      <div class="slide">
+        <img src="4.jpg" alt="Фото 3">
+      </div>
+      <div class="slide">
+        <img src="5.jpg" alt="Фото 4">
+      </div>
+    </div>
+
+    <button class="slider-btn prev" id="prevBtn">❮</button>
+    <button class="slider-btn next" id="nextBtn">❯</button>
+  </div>
+
+  <div class="dots" id="dots">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+    <span class="dot" data-index="3"></span>
+  </div>
+</section>
+
+        <div class="media-box">
+          <video controls playsinline>
+            <source src="дорама.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="audio-box">
+          <audio controls>
+            <source src="али.mp4" type="audio/mpeg" />
+          </audio>
+        </div>
+      </section>
+      <div class="surprise-box">
+  <button class="btn" id="surpriseBtn">💖 Нажми для сюрприза</button>
+</div>
+      <div class="footer-line">
+        Сделано с теплом, как закат в любимой дораме 🌅
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
